@@ -10,50 +10,21 @@
   <div class="container">
     <h1>Простой чат</h1>
     <div id="auth-card" class="card">
-      <div class="tabs">
-        <button id="tab-login" class="active">Войти</button>
-        <button id="tab-register">Регистрация</button>
-      </div>
       <form id="login-form">
         <div class="row">
           <input id="login-username" placeholder="Логин" />
-          <input id="login-password" type="password" placeholder="Пароль" />
           <button type="submit">Войти</button>
         </div>
+        <div id="auth-error" style="color:#fca5a5;margin-top:6px;"></div>
       </form>
-      <form id="register-form" style="display:none">
-        <div class="row">
-          <input id="register-username" placeholder="Логин" />
-          <input id="register-password" type="password" placeholder="Пароль (>=6)" />
-          <button type="submit">Зарегистрироваться</button>
-        </div>
-      </form>
-      <div id="auth-error" style="color:#fca5a5;margin-top:6px;"></div>
     </div>
 
     <div id="chat-card" class="card" style="display:none">
       <div class="hello">Здравствуйте, <span id="me-name"></span>!
-        <label class="avatar-label"><input id="avatar-input" type="file" accept="image/*" hidden /><span class="avatar-btn">🖼️ Аватар</span></label>
         <button id="logout-btn" style="float:right">Выйти</button>
       </div>
 
-      <div class="chat-actions">
-        <input id="search-input" placeholder="поиск..." />
-        <button id="search-btn" type="button">Найти</button>
-        <button id="show-pins" type="button">Пины</button>
-        <input id="file-input" type="file" hidden />
-        <button id="attach-btn" type="button">📎</button>
-        <select id="room-select">
-          <option value="global">#global</option>
-        </select>
-        <input id="dm-user" placeholder="DM: username" />
-        <button id="dm-open" type="button">Открыть DM</button>
-      </div>
-
-      <div id="pins" class="pins hidden"></div>
-      <div class="load-more-wrap"><button id="load-more" type="button">Загрузить ещё</button></div>
       <ul id="messages" class="messages"></ul>
-      <div id="typing" class="typing hidden"></div>
 
       <form id="message-form" class="message-form">
         <input id="message-input" placeholder="Сообщение..." />

@@ -1,25 +1,15 @@
-# TeleIgorGram v4 (fixed)
+# TeleIgorGram
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+Простое приложение чата на Node.js и Socket.IO.
 
-Функции:
-- Регистрация/логин (JWT в httpOnly cookie)
-- Комнаты и личные сообщения (DM)
-- Вложения (картинки/файлы), предпросмотр изображений
-- Реакции, пины, редактирование/удаление
-- Индикатор «печатает…», пагинация, аватары
-- Поиск (SQLite FTS5 при наличии)
-- Защита: helmet, rate-limit
+## Возможности
+- Вход по имени пользователя
+- Обмен сообщениями в реальном времени
 
-## Запуск локально
+## Запуск
 ```bash
 npm install
 npm start
-# http://localhost:3000
+# Открыть http://localhost:3000
 ```
 
-## Переменные окружения
-- `JWT_SECRET` (обязательно на проде)
-- `ADMIN_USERNAMES` (напр. `igor,admin`)
-- `MAX_UPLOAD_MB` (по умолчанию 5)
-- `NODE_VERSION` (18)
