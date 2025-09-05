@@ -51,4 +51,3 @@ logoutBtn.addEventListener('click', () => {
   socket.disconnect();
   window.location.reload();
 });
-
