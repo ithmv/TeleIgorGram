@@ -5,6 +5,7 @@ const chatCard = document.getElementById('chat-card');
 const loginForm = document.getElementById('login-form');
 const loginInput = document.getElementById('login-username');
 const authError = document.getElementById('auth-error');
+const logoutBtn = document.getElementById('logout-btn');
 
 const meName = document.getElementById('me-name');
 const messages = document.getElementById('messages');
@@ -45,3 +46,8 @@ messageForm.addEventListener('submit', (e) => {
   messageInput.value = '';
 });
 
+// Logout and reset state
+logoutBtn.addEventListener('click', () => {
+  socket.disconnect();
+  window.location.reload();
+});
